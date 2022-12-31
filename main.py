@@ -1,6 +1,7 @@
 import datetime
 import sys
 import serial
+import random
 
 from PyQt5.QtGui import QGuiApplication
 from PyQt5.QtQml import QQmlApplicationEngine
@@ -54,7 +55,7 @@ class hmi(QObject):
         except serial.SerialException as e:
             print("SERIAL NOT RESPONDING")
             #self.ser.close()
-            sys.exit(-1)
+            #sys.exit(-1)
 
     def initTimer(self):
         self.timer = QTimer()
@@ -63,7 +64,13 @@ class hmi(QObject):
         self.timer.start()
 
     def updateQml(self):
-        inData = self.ser.readline()
+        #inData = self.ser.readline()
+        randKec = random.randrange(30,120)
+        randTemp = random.uniform(60.5, 80.5)
+        randCurrent = random.uniform(12.5, 20.5)
+        randVoltage = random.uniform(44.5,49.5)
+        randBatt = random.randrange(40,50)
+        inData = "0 0 "+str(randKec)+" "+str(randTemp)+" "+str(randCurrent)+" "+str(randVoltage)+" "+str(randBatt)
         arrayData = inData.split()
         if len(arrayData) >= 7:
             inButton1 = int(arrayData[0])

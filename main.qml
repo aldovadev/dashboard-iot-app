@@ -336,34 +336,13 @@ Window {
                 gauge2.value= kecepatan*2/3;
                 text9.text= parseInt(kecepatan*2/3);
             }
-
-            onValTemp:{
-                text17.text= temp;
-            }
-
-            onValVoltage:{
-                text13.text= "VOLTAGE: "+voltage+"   V";
-            }
-
-            onValCurrent:{
-                text14.text= "CURRENT: "+current+"   A";
-            }
-
-            onValPower:{
-                text18.text= power;
-            }
-
-            onValBatt:{
-                text5.text= batt+" %";
-            }
-
-            onValDate:{
-                text15.text= "Date: "+date;
-            }
-
-            onValTime:{
-                text16.text= "Time: "+"Padang, "+time+" WIB";
-            }
+            onValTemp:{text17.text= temp;}
+            onValVoltage:{text13.text= "VOLTAGE: "+voltage+"   V";}
+            onValCurrent:{text14.text= "CURRENT: "+current+"   A";}
+            onValPower:{text18.text= power;}
+            onValBatt:{text5.text= batt+" %";}
+            onValDate:{text15.text= "Date: "+date;}
+            onValTime:{text16.text= "Time: "+"Padang, "+time+" WIB";}
         }
     }
 }
