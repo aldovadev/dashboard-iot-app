@@ -1,1 +1,1 @@
-# Electric-Car-GUI-IoT-Logger
+ Electric-Car-GUI-IoT-Logger (QML and Python)
